@@ -1,0 +1,233 @@
+:root {
+  --bg-deep: #0B0B1F;
+  --bg-mid: #12122E;
+  --bg-soft: #1A1438;
+  --surface: #16162E;
+  --surface-elevated: #1F1F3D;
+  --primary: #B8A6FF;
+  --primary-glow: #8B7FFF;
+  --primary-deep: #6B4FE8;
+  --gold: #F4D77A;
+  --text: #F0EDFF;
+  --text-secondary: #A8A4C9;
+  --text-tertiary: #6E6B95;
+  --stroke: rgba(184, 166, 255, 0.2);
+  --max-width: 720px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at 80% -10%, rgba(107, 79, 232, 0.25), transparent 40%),
+    radial-gradient(circle at 10% 110%, rgba(244, 215, 122, 0.1), transparent 40%),
+    linear-gradient(180deg, var(--bg-deep), var(--bg-mid) 50%, var(--bg-soft));
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  min-height: 100vh;
+  padding: 48px 24px;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+header.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: radial-gradient(circle at 30% 30%, var(--primary-glow), var(--primary-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 0 24px rgba(184, 166, 255, 0.35);
+}
+
+.brand {
+  font-family: "Fraunces", "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.brand-sub {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+h1.doc-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+  line-height: 1.15;
+}
+
+p.meta {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 36px;
+}
+
+h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 36px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+p {
+  color: rgba(240, 237, 255, 0.92);
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 18px;
+}
+
+ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  color: rgba(240, 237, 255, 0.9);
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.callout {
+  background: var(--surface);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+
+.callout.warn {
+  background: rgba(255, 107, 122, 0.08);
+  border-color: rgba(255, 107, 122, 0.35);
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 15px;
+  border: 1px solid var(--stroke);
+  color: var(--text);
+  background: var(--surface-elevated);
+  transition: transform 0.15s, background 0.2s;
+}
+
+.btn:hover {
+  background: var(--surface);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-glow), var(--primary-deep));
+  color: var(--bg-deep);
+  border-color: transparent;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary), var(--primary-glow));
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), #D4B355);
+  color: var(--bg-deep);
+  border-color: transparent;
+}
+
+footer {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--stroke);
+  color: var(--text-tertiary);
+  font-size: 13px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--text-secondary);
+  margin: 0 10px;
+}
+
+@media (max-width: 600px) {
+  body { padding: 28px 16px; }
+  h1.doc-title { font-size: 32px; }
+  h2 { font-size: 20px; margin-top: 28px; }
+  .nav-links { display: none; }
+}

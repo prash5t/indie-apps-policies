@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>awarself · App policies</title>
+<meta name="description" content="Privacy policies, terms of service, and account deletion pages for awarself's indie apps." />
+<style>
+:root {
+  --bg-deep: #0B0B1F;
+  --bg-mid: #12122E;
+  --bg-soft: #1A1438;
+  --surface: #16162E;
+  --surface-elevated: #1F1F3D;
+  --primary: #B8A6FF;
+  --primary-glow: #8B7FFF;
+  --primary-deep: #6B4FE8;
+  --gold: #F4D77A;
+  --text: #F0EDFF;
+  --text-secondary: #A8A4C9;
+  --text-tertiary: #6E6B95;
+  --stroke: rgba(184, 166, 255, 0.2);
+  --max-width: 760px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background:
+    radial-gradient(circle at 80% -10%, rgba(107, 79, 232, 0.25), transparent 40%),
+    radial-gradient(circle at 10% 110%, rgba(244, 215, 122, 0.1), transparent 40%),
+    linear-gradient(180deg, var(--bg-deep), var(--bg-mid) 50%, var(--bg-soft));
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  min-height: 100vh;
+  padding: 56px 24px;
+}
+
+main { max-width: var(--max-width); margin: 0 auto; }
+
+header.hero {
+  margin-bottom: 48px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: radial-gradient(circle at 30% 30%, var(--primary-glow), var(--primary-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 0 24px rgba(184, 166, 255, 0.35);
+}
+
+.brand-name {
+  font-family: "Fraunces", "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+p.lede {
+  color: var(--text-secondary);
+  font-size: 17px;
+  max-width: 580px;
+}
+
+h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.app-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+
+.app-card {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 20px 22px;
+  transition: transform 0.15s, border-color 0.2s, background 0.2s;
+}
+
+.app-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(184, 166, 255, 0.45);
+  background: var(--surface-elevated);
+}
+
+.app-card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.app-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: radial-gradient(circle at 30% 30%, var(--primary-glow), var(--primary-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.app-name {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.app-tagline {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.app-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.app-links a {
+  font-size: 13px;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.app-links a:hover {
+  background: rgba(184, 166, 255, 0.08);
+}
+
+footer {
+  margin-top: 64px;
+  padding-top: 28px;
+  border-top: 1px solid var(--stroke);
+  color: var(--text-tertiary);
+  font-size: 13px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+footer a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  body { padding: 28px 16px; }
+  h1 { font-size: 32px; }
+}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="brand">
+      <div class="logo">🌙</div>
+      <div class="brand-name">awarself</div>
+    </div>
+    <h1>App policies</h1>
+    <p class="lede">Privacy policies, terms of service, and account deletion pages for awarself's indie apps. Each app keeps its own set under the directory below.</p>
+  </header>
+
+  <h2>Apps</h2>
+  <div class="app-grid">
+
+    <a class="app-card" href="dream_journal/index.html">
+      <div class="app-card-head">
+        <div class="app-icon">🌙</div>
+        <div>
+          <div class="app-name">Lucid · Dream Journal</div>
+        </div>
+      </div>
+      <p class="app-tagline">A private dream journal with AI interpretation, pattern analysis, and cloud sync.</p>
+      <div class="app-links">
+        <a href="dream_journal/privacy.html">Privacy</a>
+        <a href="dream_journal/terms.html">Terms</a>
+        <a href="dream_journal/delete-account.html">Delete account</a>
+      </div>
+    </a>
+
+  </div>
+
+  <footer>
+    <p>&copy; awarself · Questions? <a href="mailto:awarself@gmail.com">awarself@gmail.com</a></p>
+  </footer>
+</main>
+</body>
+</html>
