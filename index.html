@@ -150,7 +150,6 @@ p.lede {
 .app-card {
   position: relative;
   display: block;
-  text-decoration: none;
   color: var(--text);
   background: var(--glass-surface);
   backdrop-filter: blur(40px) saturate(180%);
@@ -187,16 +186,13 @@ p.lede {
   transition: opacity 0.3s ease;
 }
 
-.app-card:hover,
-.app-card:focus-visible {
-  transform: translateY(-3px);
+.app-card:hover {
   background: var(--glass-surface-hover);
   border-color: var(--glass-border-hover);
   box-shadow:
     inset 0 1px 0 var(--glass-specular),
     0 1px 2px rgba(0, 0, 0, 0.18),
-    0 24px 60px rgba(0, 0, 0, 0.32);
-  outline: none;
+    0 18px 48px rgba(0, 0, 0, 0.28);
 }
 
 .app-card:hover::before { opacity: 1; }
@@ -376,7 +372,7 @@ footer a:hover { color: var(--text); }
 
   <div class="app-grid">
 
-    <a class="app-card card-salary" href="salary_countdown/privacy-policy.html">
+    <article class="app-card card-salary">
       <div class="app-card-head">
         <div class="app-icon icon-salary" aria-hidden="true">💸</div>
         <div class="app-text">
@@ -390,9 +386,9 @@ footer a:hover { color: var(--text); }
         <a href="salary_countdown/account-deletion.html">Delete account</a>
         <a href="salary_countdown/in-app-economy.html">In-app economy</a>
       </div>
-    </a>
+    </article>
 
-    <a class="app-card card-vparty" href="vparty/privacy-policy.html">
+    <article class="app-card card-vparty">
       <div class="app-card-head">
         <div class="app-icon icon-vparty" aria-hidden="true">⚡</div>
         <div class="app-text">
@@ -406,9 +402,9 @@ footer a:hover { color: var(--text); }
         <a href="vparty/account-deletion.html">Delete account</a>
         <a href="vparty/in-app-economy.html">In-app economy</a>
       </div>
-    </a>
+    </article>
 
-    <a class="app-card card-kpop" href="kpopchat/privacy-policy.html">
+    <article class="app-card card-kpop">
       <div class="app-card-head">
         <div class="app-icon icon-kpop" aria-hidden="true">🎵</div>
         <div class="app-text">
@@ -421,9 +417,9 @@ footer a:hover { color: var(--text); }
         <a href="kpopchat/account-deletion.html">Delete account</a>
         <a href="kpopchat/in-app-economy.html">In-app economy</a>
       </div>
-    </a>
+    </article>
 
-    <a class="app-card card-dream" href="dream_journal/privacy.html">
+    <article class="app-card card-dream">
       <div class="app-card-head">
         <div class="app-icon icon-dream" aria-hidden="true">🌙</div>
         <div class="app-text">
@@ -437,7 +433,7 @@ footer a:hover { color: var(--text); }
         <a href="dream_journal/terms.html">Terms</a>
         <a href="dream_journal/delete-account.html">Delete account</a>
       </div>
-    </a>
+    </article>
 
   </div>
 
