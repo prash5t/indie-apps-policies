@@ -204,58 +204,72 @@ p.lede {
 .app-card-head {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 12px;
+  gap: 13px;
+  margin-bottom: 14px;
 }
 
 .app-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-icon);
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
+  font-size: 22px;
   flex-shrink: 0;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.32),
     inset 0 -1px 0 rgba(0, 0, 0, 0.2),
-    0 6px 18px rgba(0, 0, 0, 0.28);
+    0 4px 14px rgba(0, 0, 0, 0.24);
+}
+
+.app-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 1px;
 }
 
 .app-name {
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: -0.015em;
-  line-height: 1.25;
+  line-height: 1.2;
+}
+
+.app-subtitle {
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: -0.005em;
+  line-height: 1.2;
 }
 
 .app-tagline {
   color: var(--text-secondary);
-  font-size: 14.5px;
-  line-height: 1.45;
-  margin-bottom: 18px;
-  min-height: 2.9em; /* keeps cards in a row aligned even with shorter taglines */
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
 }
 
 .app-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .app-links a {
   display: inline-flex;
   align-items: center;
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 500;
-  color: var(--text);
+  color: var(--text-secondary);
   text-decoration: none;
-  padding: 7px 14px;
+  padding: 4px 10px;
   background: var(--pill-bg);
   border: 1px solid var(--pill-border);
   border-radius: var(--radius-pill);
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   letter-spacing: -0.005em;
 }
 
@@ -263,7 +277,7 @@ p.lede {
 .app-links a:focus-visible {
   background: var(--pill-bg-hover);
   border-color: var(--glass-border-hover);
-  transform: translateY(-1px);
+  color: var(--text);
   outline: none;
 }
 
@@ -306,7 +320,6 @@ footer a:hover { color: var(--text); }
 @media (max-width: 600px) {
   body { font-size: 16px; }
   main { padding: 36px 16px 56px; }
-  .app-tagline { min-height: 0; }
   .app-card { padding: 22px 22px 18px; }
 }
 
@@ -366,7 +379,10 @@ footer a:hover { color: var(--text); }
     <a class="app-card card-salary" href="salary_countdown/privacy-policy.html">
       <div class="app-card-head">
         <div class="app-icon icon-salary" aria-hidden="true">💸</div>
-        <div class="app-name">Salary Countdown<br><span style="font-weight:400;color:var(--text-secondary);font-size:14px;letter-spacing:-0.005em;">Broke-O-Meter</span></div>
+        <div class="app-text">
+          <div class="app-name">Salary Countdown</div>
+          <div class="app-subtitle">Broke-O-Meter</div>
+        </div>
       </div>
       <p class="app-tagline">Track your paycheck. Get roasted. A sarcastic payday tracker — ads-only, no in-app currency.</p>
       <div class="app-links">
@@ -379,7 +395,10 @@ footer a:hover { color: var(--text); }
     <a class="app-card card-vparty" href="vparty/privacy-policy.html">
       <div class="app-card-head">
         <div class="app-icon icon-vparty" aria-hidden="true">⚡</div>
-        <div class="app-name">VParty<br><span style="font-weight:400;color:var(--text-secondary);font-size:14px;letter-spacing:-0.005em;">Vibrating Party</span></div>
+        <div class="app-text">
+          <div class="app-name">VParty</div>
+          <div class="app-subtitle">Vibrating Party</div>
+        </div>
       </div>
       <p class="app-tagline">One phone performs, every phone feels it — synced haptic + sound + light parties. Solo, LAN, or one shared global stage.</p>
       <div class="app-links">
@@ -392,7 +411,9 @@ footer a:hover { color: var(--text); }
     <a class="app-card card-kpop" href="kpopchat/privacy-policy.html">
       <div class="app-card-head">
         <div class="app-icon icon-kpop" aria-hidden="true">🎵</div>
-        <div class="app-name">KpopChat</div>
+        <div class="app-text">
+          <div class="app-name">KpopChat</div>
+        </div>
       </div>
       <p class="app-tagline">Chat with AI-generated K-pop fan personas, browse a world map of fans, and follow a live K-pop news feed.</p>
       <div class="app-links">
@@ -405,7 +426,10 @@ footer a:hover { color: var(--text); }
     <a class="app-card card-dream" href="dream_journal/privacy.html">
       <div class="app-card-head">
         <div class="app-icon icon-dream" aria-hidden="true">🌙</div>
-        <div class="app-name">Lucid<br><span style="font-weight:400;color:var(--text-secondary);font-size:14px;letter-spacing:-0.005em;">Dream Journal</span></div>
+        <div class="app-text">
+          <div class="app-name">Lucid</div>
+          <div class="app-subtitle">Dream Journal</div>
+        </div>
       </div>
       <p class="app-tagline">A private dream journal with AI interpretation, pattern analysis, and cloud sync.</p>
       <div class="app-links">
